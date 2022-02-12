@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.criteria.CriteriaBuilder;
 
 @RestController
+@RequestMapping("/AccountCreation")
 public class AccountController {
     @Autowired
     AccountService accountService;
