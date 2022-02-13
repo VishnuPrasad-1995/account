@@ -4,6 +4,8 @@ import com.mavericsystems.account.model.Account;
 import com.mavericsystems.account.repo.AccountRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -24,6 +26,11 @@ public class AccountServiceImpl implements AccountService{
         else return null;
 
 
+    }
+
+    @Override
+    public List<Account> getAllAccount() {
+        return accountRepo.findAll();
     }
 
 }
